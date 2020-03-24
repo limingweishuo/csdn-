@@ -1,0 +1,30 @@
+1、整体刷新
+    window.location.reload();    //整个html全部重新加载
+2、部分刷新
+    --比如说表单提交，如果全部刷新又需要重新填写，很麻烦
+    $("#repo_file_address_div").load(location.href+" #repo_file_address_div");
+        --"#repo_file_address_div"  为div标签的id标识符  
+        --" #repo_file_address_div"  注意#号前面有一个空格，如果没有会出现错误，同时repo_file_address_div为div标签的id标识符，这也就是所谓的局部加载
+3、
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
