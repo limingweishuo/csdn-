@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="jquery.min.js">
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){ 
+		$('#mySelect').change(function(){ 
+			var select_value = $("#mySelect").val();
+			if (select_value == '2'){
+			    //var lenght_p1 = "可以转换";
+				//alert(lenght_p1);
+				if ($("#param1").length<1 && ){
+					$("#param1").attr('value', 'list');
+					$("#mySelect").after('<br><input type="type" value="biubiu" name="param1" id="param1"/><p>lalalalalal</p>');
+				}				
+			}
+			else{
+				alert("wbcfhwebwkeh");
+			}
+		});
+	}); 
+</script>
+</head>
+<body>
+	<select id="mySelect"> 
+		<option value="1" selected="selected">one</option> 
+		<option value="2">two</option> 
+		<option value="3">three</option> 
+	</select> 
+	<div id="test_div" style="border:1px #000 solid"><p>头部</p><p>尾部</p></div><p>外部</p>
+	<input type="type" value="000" name="param1" id="param1">
+</body>
+</html>
+
+
