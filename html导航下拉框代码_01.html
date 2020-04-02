@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+		.nav_design{ width:100%; height:40px; background:#222; margin-top:100px;}
+		.nav_design *{padding:0; margin:0;}
+		.nav_design .list{ width:1000px; height:40px;margin:0 auto;}
+		.nav_design li{ list-style:none}
+		.nav_design a{ text-decoration:none;}
+		.list li{ float:left; position:relative;}
+		.list li>a{ padding:0 30px; line-height:40px; display:block; color:#aaa; font-size:16px;}
+		.list li:hover>a{ background:#333; color:#fff;}
+		.list li:hover .down{ display:block;}
+
+		.list li .down{ width:150px; background:#333; position:absolute; top:40px;left:0; display:none;}
+		.list li .down a{ display:block; line-height:30px; color:#aaa; font-size:14px; padding-left:30px;}
+		.list li .down a:hover{ color:#fff;}
+    </style>
+</head>
+<head>
+		<meta charset="utf-8" />
+		<title>导航栏</title>
+		<link rel="stylesheet" href="css/test.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+	</head>
+	<body>
+		<div class="nav_design">
+			<ul class="list">
+				<li><a href="#">首页</a></li>
+				
+				<li><a href="#">职业课程</a>
+					<div class="down">
+						<a href="#">课程库</a>
+						<a href="#">知识体系图</a>
+						<a href="#">职业路径图</a>
+						<a href="#">系列课程</a>
+                    </div>
+				</li>
+				
+				<li>
+        	        <a href="#">就业学习</a>
+                    <div class="down">
+						<a href="#">Web前端开发</a>
+						<a href="#">Android开发</a>
+						<a href="#">JavaWeb开发</a>
+                    </div>
+                </li>
+        
+				<li>
+					<a href="#">极客社区</a>
+					<div class="down">
+						<a href="#">wiki</a>
+						<a href="#">技术问答</a>
+						<a href="#">社群</a>
+						<a href="#">资源分享</a>
+					</div>
+				</li>
+				
+				<li>
+					<a href="#">极客+</a>
+					<div class="down">
+						<a href="#">高校合作</a>
+						<a href="#">极客人才联盟</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
