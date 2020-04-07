@@ -1,0 +1,29 @@
+1、cpu数、cpu核心数、逻辑cpu数/cpu核心数/cpu线程数
+        --物理CPU数：机器的主板上实际插入插槽的CPU个数
+        --CPU核数：单块CPU上面集成一个或者多个处理器芯片(称为Core，核心)，最初是一个CPU一个处理核心，只通过提高核心工作频率来提高工作性能，但是这样会造
+                  成发热，无法提高性能，所以又发展了双核心CPU(Dual-core processor)和多核心的CPU(Multi-core processor)，在物理上是把2个或者更多的独
+                  立处理器芯片封装在一个单一的集成电路中
+        --逻辑CPU数：逻辑cpu=物理cpu个数×cpu核数，如果不相等的话，则表示服务器的CPU支持超线程技术，此时逻辑cpu=物理cpu个数×cpu核数×2
+        【注】：HT（Hyper-Threading，超线程)技术：一个Core打开HT之后，在操作系统看来就是两个核，当然这个核是逻辑上的概念，所以也被称为逻辑处理器（Logi
+        cal Processor）。“超线程”（Hyperthreading Technology）技术就是通过采用特殊的硬件指令，可以把两个逻辑内核模拟成两个物理超线程芯片，在单处理器
+        中实现线程级的并行计算，同时在相应的软硬件的支持下大幅度的提高运行效能，从而实现在单处理器上模拟双处理器的效能。其实，从实质上说，超线程是一种可
+        以将CPU内部暂时闲置处理资源充分“调动”起来的技术。
+
+2、windows中查询cpu数、cpu核心数、逻辑cpu数/cpu核心数/cpu线程数
+        --cmd命令中输入“wmic”，打开新窗口
+        --cpu get Name：表示物理CPU数
+        --cpu get NumberOfCores：表示CPU核心数 
+        --cpu get NumberOfLogicalProcessors：表示CPU线程数
+        
+        --也可输入cpu get *  查询所有信息
+        --cmd下，输入systeminfo，查看物理cpu个数
+
+3、linux下查询cpu数、cpu核心数、逻辑cpu数/cpu核心数/cpu线程数
+        --查询cpu数：cat /proc/cpuinfo | grep "physical id" | sort | uniq
+        --查询cpu核心数：cat /proc/cpuinfo | grep "cores" | uniq
+        --查询逻辑cpu数/cpu核心数/cpu线程数： cat /proc/cpuinfo | grep "processor" | wc -l
+
+4、通过计算
+        物理cpu * cpu而核心数  是否等于  逻辑cpu/cpu核心数/cpu线程数，判断系统是否开启HT/超线程
+
+
