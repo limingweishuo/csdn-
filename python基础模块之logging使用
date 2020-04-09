@@ -1,0 +1,92 @@
+1、logging四个部分：
+    --loggers：相当于一个接口，可以直接向logger写入日志信息。logger并不是直接实例化使用的，而是通过logging.getLogger(name)来获取对象，
+              事实上logger对象是单例模式，logging是多线程安全的，也就是无论程序中哪里需要打日志获取到的logger对象都是同一个。但是不幸的是logger并不支
+              持多进程，这个在后面的章节再解释，并给出一些解决方案。
+    【注意】loggers对象是有父子关系的，当没有父logger对象时它的父对象是root，当拥有父对象时父子关系会被修正。举个例子，logging.getLogger("abc.xyz") 
+           会创建两个logger对象，一个是abc父对象，一个是xyz子对象，同时abc没有父对象，所以它的父对象是root。但是实际上abc是一个占位对象（虚的日志对象）
+           ，可以没有handler来处理日志。但是root不是占位对象，如果某一个日志对象打日志时，它的父对象会同时收到日志，所以有些使用者发现创建了一个logger
+           对象时会打两遍日志，就是因为他创建的logger打了一遍日志，同时root对象也打了一遍日志。
+    --Handlers：相当于一个管道，将loggers和文件/console[控制台]连接起来，一个logger可以对应多个Handlers
+    --Filters：相当于一个水龙头开关，而且这个水龙开关可以多个串联，形成多道控制。其提供的控制粒度更加细微，能够对来自特定源的日志进行拦截or修改甚至修改
+               其日志级别（修改后再进行级别判断）。但一般我们只根据其级别进行控制
+    --Formatters：指定了最终某条记录打印的格式布局。Formatter会将传递来的信息拼接成一条具体的字符串，默认情况下Format只会将信息%(message)s直接打印出
+               来。一个Handler只能拥有一个Formatter 因此如果要实现多种格式的输出只能用多个Handler来实现。
+
+2、日志级别
+    python中日志一共分成5个等级，从低到高分别是：DEBUG、INFO、 WARNING、ERROR、CRITICAL
+        --DEBUG：详细的信息，通常只出现在诊断问题上
+        --INFO：确认一切按预期运行
+        --WARNING：一个迹象表明，一些意想不到的事情发生了，或表明一些问题在不久的将来(例如：磁盘空间低)；目前这个软件还能按预期工作
+        --ERROR：比较严重的问题，软件或程序没能执行一些功能
+        --CRITICAL：十分严重的错误，这表明程序本身可能无法继续运行
+  
+3、输出方式
+    有两种方式记录跟踪，一种输出到控制台，另一种是记录到文件中，比如日志文件
+  
+4、设置基本格式【此时没有使用logger，会发现文件和控制台的结果一样都是被限制输出的结果，使用以后控制台还有限制，日志却能够把所有详细情形记录下来】
+    # coding=utf-8
+    import logging  # 导入logging模块
+
+    logging.basicConfig(level=logging.WARNING,
+                        filename='./log/log.txt',   # 注意需要提前新建一个log文件加，log.txt会自动创建的
+                        filemode='w',   # 写文件
+                        format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+    # 配置logging的基本信息， level=logging.WARNING,记录WARNING及以上的日志,format 记录格式及内容
+
+    # use logging
+    logging.debug('this is a loggging debug message')
+    logging.info('this is a loggging info message')
+    logging.warning('this is loggging a warning message')
+    logging.error('this is an loggging error message')
+    logging.critical('this is a loggging critical message')
+    【注意】：通过 logging.basicConfig 函数对日志的输出格式及方式做相关配置，上面代码设置日志的输出等级是WARNING级别，意思是WARNING级别以上的日志才会
+             输出。
+
+5、logger、handler、formatter和filters使用来进行日志传输   
+    # coding=utf-8
+    import logging
+
+    # 第一步，创建一个logger
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)  # Log等级总开关
+
+    # 第二步，创建一个handler，用于写入日志文件
+    logfile = './log/logger.txt'
+    fh = logging.FileHandler(logfile, mode='w')
+    fh.setLevel(logging.DEBUG)  # 输出到file的log等级的开关
+
+    # 第三步，再创建一个handler，用于输出到控制台
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.WARNING)  # 输出到console的log等级的开关
+
+    # 第四步，定义handler的输出格式
+    formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
+    fh.setFormatter(formatter)
+    ch.setFormatter(formatter)
+
+    # 第五步，将logger添加到handler里面
+    logger.addHandler(fh)
+    logger.addHandler(ch)
+
+    # 日志
+    logger.debug('this is a logger debug message')
+    logger.info('this is a logger info message')
+    logger.warning('this is a logger warning message')
+    logger.error('this is a logger error message')
+    logger.critical('this is a logger critical message')
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
