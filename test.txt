@@ -437,3 +437,190 @@ null
 
 05、多选
 
+
+分析下面的代码：<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />function writeIt (value) { document.myfm.first_text.value=value;}<br />&lt;/script&gt;<br />&lt;/head&gt;<br />&lt;body bgcolor=&quot;#ffffff&quot;&gt;<br />&lt;form name=&quot;myfm&quot;&gt;<br />&lt;input type=&quot;text&quot; name=&quot;first_text&quot;&gt;<br />&lt;input type=&quot;text&quot; name=&quot;second_text&quot; onchange=&quot;writeIt(value)&quot;&gt;<br />&lt;/form&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br />以下说法中正确的是（ ）
+C,D
+A. 在页面的第二个文本框中输入内容后，当鼠标离开第二个文本框时，第一个文本框的内容不变
+B. 在页面的第一个文本框中输入内容后，当鼠标离开第一个文本框时，将在第二个文本框中复制第一个文本框的内容
+C. 在页面的第二个文本框中输入内容后，当鼠标离开第二个文本框时，将在第一个文本框中复制第二个文本框的内容
+D. 在页面的第一个文本框中输入内容后，当鼠标离开第一个文本框时，第二个文本框的内容不变
+
+
+
+使用 JavaScript 向网页中输出&lt;h1&gt;hello&lt;/h1&gt;，以下代码中可行的是（  ）
+B,D
+A. &lt;script type=&quot;text/javascript&quot;&gt; document.write(&lt;h1&gt;hello&lt;/h1&gt;); &lt;/script&gt;
+B. &lt;script type=&quot;text/javascript&quot;&gt; document.write(&quot;&lt;h1&gt;hello&lt;/h1&gt;&quot;); &lt;/script&gt;
+C. &lt;script type=&quot;text/javascript&quot;&gt; &lt;h1&gt;hello&lt;/h1&gt; &lt;/script&gt;
+D. &lt;h1&gt; &lt;script type=&quot;text/javascript&quot;&gt; document.write(&quot;hello&quot;); &lt;/script&gt; &lt;/h1&gt;
+
+
+
+点击页面的按钮，使之打开一个新窗口，加载一个网页，以下 JavaScript 代码中可行的<br />是（  ）
+A,D
+A. &lt;input type=&quot;button&quot; value=&quot;new&quot;onclick=&quot;open('new.html', '_blank') &quot;/&gt;
+B. &lt;input type=&quot;button&quot; value=&quot;new&quot;onclick=&quot;window.location='new.html';&quot;/&gt;
+C. &lt;input type=&quot;button&quot; value=&quot;new&quot;onclick=&quot; location.assign('new.html');&quot;/&gt;
+D. &lt;form target=&quot;_blank&quot; action=&quot;new.html&quot;&gt;  &lt;input type=&quot;submit&quot; value=&quot;new&quot;/&gt; &lt;/form&gt;
+
+
+
+以下关于 Array 数组对象的说法不正确的是（  ）
+C,D
+A. 对数组里数据的排序可以用 sort 函数，如果排序效果非预期，可以给 sort 函数加一个
+排序函数的参数
+B. reverse 用于对数组数据的倒序排列
+C. 向数组的最后位置加一个新元素，可以用 pop 方法
+D. unshift 方法用于向数组删除第一个元素
+
+
+关于 JavaScript 里的 xml 处理，以下说明正确的是（)
+B,C,D
+A. Xml 是种可扩展标记语言，格式更规范，是作为未来 html 的替代
+B. Xml 一般用于传输和存储数据，是对 html 的补充，两者的目的不同
+C. 在 JavaScript 里解析和处理 xml 数据时，因为浏览器的不同，其做法也不同
+D. 在 IE 浏览器里处理 xml，首先需要创建 ActiveXObject 对象
+
+
+
+Choose the correct ones from the following statements:
+A,D
+A class can implement more than one interfaces
+A class can extend more than one class
+An interface has at least one method declared.
+An abstract class which has no abstract methods declared is legal
+
+
+
+下面哪几个语句正确的声明一个整型的二维数组（）
+C,D
+int a[][]=new int[][]
+int b[10][10]=new int[][]
+int c[][]=new int[10][10]
+int []d[]=new int[10][10]
+
+
+
+下面哪几个函数 public void example(){....} 的重载函数？（）
+A,D
+public void example(int m){...}
+public int example(){..}
+public void example2(){..}
+public int example(int m,float f){...}
+
+
+
+下面哪些赋值语句是正确的（）
+A,B,D
+long test=012
+float f=-412
+int other =(int)true
+double d=0x12345678
+byte b=128
+
+
+下列关于JAVA多线程的叙述正确的是（）
+B,C
+调用start()方法和run()都可以启动一个线程
+CyclicBarrier和CountDownLatch都可以让一组线程等待其他线程
+Callable类的call()方法可以返回值和抛出异常
+新建的线程调用start()方法就能立即进行运行状态
+
+
+
+下列关于构造方法的叙述中，错误的是（）
+C,D
+java语言规定构造方法名与类名必须相同
+java语言规定构造方法没有返回值，但不同void声明
+java语言规定构造方法不可以重载
+java语言规定构造方法只能通过new自动调用
+
+
+
+以下哪些继承自 Collection 接口（）
+A,B
+List
+Set
+Map
+Array
+
+
+
+Java 提供的事件处理模型是一种人机交互模型。它有三个基本要素
+A,B,D
+事件源
+事件对象
+事件过程
+事件监听器
+
+
+
+下面哪些写法能在 java8 中编译执行（）
+A,D
+dir.listFiles((File f)->f.getName().endsWith(“.Java”));
+dir.listFiles((File f)=>f.getName().endsWith(“.Java”));
+dir.listFiles((_.getName().endsWith(“.Java”)));
+dir.listFiles( f->f.getName().endsWith(“.Java”));
+
+
+
+Choose the correct ones from the following statements:
+A,D
+class can implement more than one interfaces
+A class can extend more than one class
+An interface has at least one method declared.
+An abstract class which has no abstract methods declared is legal
+
+
+
+以下 json 格式数据，错误的是
+A,C
+{company：4399}
+{"company":{"name":[4399,4399,4399]}}
+{[4399,4399,4399]}
+{"company":[4399,4399,4399]}
+{"company":{"name":4399}}
+
+
+在 hibernate 开发中，关于 POJO 类对象的状态说法正确的是（）。
+A,B,C
+自由状态（Transient）：实体在内存中自由存在，与数据库中的记录无关
+持久状态（Persistent）：实体处于由Hibernate框架所管理的状态，对应了数据库中的一条记录，同
+时与某个session实例发生了关联
+游离状态（Detached）：在session 关闭之后,可以使对象从持久状态转换到游离状态
+不能将对象从游离状态转换成持久态
+
+
+
+以下代码定义了一个变量，如何输出这个变量的值？
+
+
+A,C,D
+<% String myBean = (String)pageContext.getAttribute(“stringBean”,PageContext.PAGE_SCOPE);
+%> <%=myBean%>
+
+<bean:write name=“helloworld”/>
+<bean:write name=“stringBean”/>
+ <%=stringBean%>
+
+
+
+以下为 java 语法保留不能作为类名和方法名使用的是
+
+default
+int
+implements
+throws
+
+
+
+下面哪些赋值语句是正确的（）
+A,B,D
+long test=012
+float f=-412
+
+int other =(int)true
+
+double d=0x12345678
+byte b=128
+
