@@ -37,169 +37,403 @@
               return [0, 1] 
               
 04、单选题
-    1、
-        有以下类定义：
-            abstract class Animal{
-            abstract void say();
-            }
-            public class Cat extends Animal{
-             public Cat(){
-              System.out.printf("I am a cat");
-             }
-             public static void main(String[] args) {
-              Cat cat=new Cat();
-             }
-            }
-         运行后
-            A、I am a cat
-            B、Animal能编译，Cat不能编译
-            C、Animal不能编译，Cat能编译
-            D、编译能通过，但是没有输出结果
-            
-         正确答案：D
-    2、如果一个方法或变量是"private"访问级别，那么它的访问范围是:
-            A、在当前类，或者子类中
-            B、在当前类或者它的父类中
-            C、在当前类，或者它所有的父类中
-            D、在当前类中
-         正确答案：D
-    3、instanceof运算符能够用来判断一个对象是否为:
-            A、一个类的实例
-            B、一个实现指定接口的类的实例
-            C、全部正确
-            D、一个子类的实例
-         正确答案：C
-    4、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    5、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    6、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    7、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    8、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    9、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    10、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    11、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    12、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    13、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    14、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    15、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    16、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    17、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    18、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    19、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    20、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    21、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    22、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    23、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    24、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-    25、
-            A、
-            B、
-            C、
-            D、
-         正确答案：
-
     
+
+不允许作为类及类成员的访问控制符是哪个项目
+C
+public
+private
+static
+protected
+
+
+以下程序中，系列说法正确的是<br />public static void main (String[] args){<br />String str = &quot;String&quot;;<br />int I;<br />System.out.println(str + i);
+A
+编译错误
+运行错误
+输出 String0
+输出 String
+
+
+关于Map和List说法正确的是（）
+D
+Map继承List
+List中可以保存Map或List
+Map和List只能保存从数据库中取出的数据
+Map的vaule可以是List或Map
+
+
+在java中，下列（）类不能派生子类
+A
+public class MyClass{}
+class MyClass{}
+abstract class MyClass{}
+final class MyClass{}
+
+
+continue语句只能用于循环语句中，它的作用是跳出循环。
+B
+对
+错
+
+
+
+
+如果p是父类Parent的对象，而c是子类Child的对象，则语句c=p是正确的
+B
+对
+错
+
+
+
+
+在java中，通过强制类型转换可以将int类型的数据转换为boolean类型。
+B
+对
+错
+
+
+
+
+在java中，由java编译器自动导入，而无需在程序中用import导入的包是（）？
+B
+java.applet
+java.lang
+java.util
+java.awt
+
+
+下面哪一种描述是正确的（）？
+D
+abstract修饰符可修饰字段、方法和类。
+抽象方法的body部分必须用一对大括号{}包住。
+声明抽象方法，大括号可有可无。
+声明抽象方法不可以写出大括号。
+
+
+Socket通信使用的底层协议是（）？
+B
+UDP协议
+TCP/IP协议
+FTP协议
+TELNET协议
+
+
+有以下类定义：
+abstract class Animal{
+abstract void say();
+}
+public class Cat extends Animal{
+ public Cat(){
+  System.out.printf("I am a cat");
+ }
+ public static void main(String[] args) {
+  Cat cat=new Cat();
+ }
+}
+运行后
+D
+I am a cat
+Animal能编译，Cat不能编译
+Animal不能编译，Cat能编译
+编译能通过，但是没有输出结果
+
+
+如果一个方法或变量是"private"访问级别，那么它的访问范围是:
+D
+在当前类，或者子类中
+在当前类或者它的父类中
+在当前类，或者它所有的父类中
+在当前类中
+
+
+instanceof运算符能够用来判断一个对象是否为:
+C
+一个类的实例
+一个实现指定接口的类的实例
+全部正确
+一个子类的实例
+
+
+以下程序执行的结果是：
+class X{
+ Y y=new Y();
+ public X(){
+  System.out.print("X");
+ }
+}
+class Y{
+ public Y(){
+  System.out.print("Y");
+ }
+}
+public class Z extends X{
+ Y y=new Y();
+ public Z(){
+  System.out.print("Z");
+ }
+ public static void main(String[] args) {
+  new Z();
+ }
+}
+C
+ZYXX
+ZYXY
+YXYZ
+XYZX
+
+
+以下关于java封装的描述中，正确的是：
+A
+封装的主要作用在于对外隐藏内部实现细节，增强程序的安全性
+封装的意义不大，因此在编码中尽量不要使用
+如果子类继承父类，对于父类中进行封装的方法，子类仍然可以直接调用
+只能对一个类中的方法进行封装，不能对属性进行封装
+
+
+类Test1定义如下:
+ public class Test1{//1
+   public float aMethod(float a,float b){}//2
+   //3
+ }//4
+将以下哪种方法插入行3是不合法的。
+C
+public int aMethod(int a,int b){}
+private float aMethod(int a,int b,int c){}
+public float aMethod(float a,float b){}
+public float aMethod(float a,float b,float c){}
+
+
+关于以下程序段，正确的说法是：（）
+String s1="abc"+"def";//1
+String s2=new String（s1);//2
+if(s1.equals(s2))//3
+System.out.println(".equals succeeded");//4
+if(s1==s2)//5
+System.out.println("==succeeded");//6
+C
+行4，行6都不执行
+行6执行，行4不执行
+行4执行，行6不执行
+行4，行6都将执行
+
+
+java中下面哪个能创建并启动线程（）
+public class MyRunnable implements Runnable {
+    public void run() {
+        //some code here
+    }
+}
+C
+new Runnable(MyRunnable).start()
+new Thread(MyRunnable).run()
+new Thread(new MyRunnable()).start()
+new MyRunnable().start()
+
+
+对于java类型变量char c,short s,float f,double d,表达式c*s+f+d的结果类型为（）
+D
+float
+char
+short
+double
+
+
+关于PreparedStatement与Statement描述错误的是（）
+D
+一般而言，PreparedStatement比Statement执行效率更高
+PreparedStatement会预编译SQL语句
+Statement每次都会解析/编译SQL，确立并优化数据获取路径
+Statement执行扫描的结果集比PreparedStatement大
+
+
+有这么一段程序：
+public class Test{
+  public String name="abc";
+  public static void main(String[] args){
+    Test test=new Test();
+    Test testB=new Test();
+    System.out.println(test.equals(testB)+","+test.name.equals(testB.name));
+  }
+}
+请问以上程序执行的结果是（）
+C
+true,true
+true,false
+false,true
+false,false
+
+
+对于一个已经不被任何变量引用的对象，当垃圾回收器准备回收该对象所占用的内存时，将自动调用该对
+象的哪个方法（）
+A
+finalize
+notify
+notifyAll
+hashCode
+
+
+有这样一段程序：
+public class Test{
+    public static void main(String [] args){
+        List list=new ArrayList();
+        list.add("a");
+        list.add("b");
+        list.add("a");
+       Set set=new HashSet();
+       set.add("a");
+       set.add("b");
+       set.add("a");
+       System.out.println(list.size()+","+set.size());
+    }
+}
+请问运行主要的程序会打印出的是什么（）
+C
+2,2
+2,3
+3,2
+3,3
+
+
+在类设计中，类的成员变量要求仅仅能够被同一package下的类访问，请问应该使用下列哪个修饰词（）
+D
+protected
+public
+private
+不需要任何修饰词
+
+
+提供java存取数据库能力的包是（）
+A
+java.sql
+java.db;
+java.lang
+java.util
+
+
+执行如下程序，输出结果是（ ）
+class Test
+{
+private int data;
+int result = 0;
+public void m()
+{
+result += 2;
+data += 2;
+System.out.print(result + " " + data);
+}
+}
+class ThreadExample extends Thread
+{
+private Test mv;
+public ThreadExample(Test mv)
+{
+this.mv = mv;
+}
+public void run()
+{
+synchronized(mv)
+{
+mv.m();
+}
+}
+}
+class ThreadTest
+{
+public static void main(String args[])
+{
+Test mv = new Test();
+Thread t1 = new ThreadExample(mv);
+Thread t2 = new ThreadExample(mv);
+Thread t3 = new ThreadExample(mv);
+t1.start();
+t2.start();
+t3.start();
+}
+}
+C
+0 22 44 6
+2 42 42 4
+2 24 46 6
+4 44 46 6
+
+
+在 Java 中，存放字符串常量的对象属于（ ）类对象。
+B
+Character
+String
+StringBuffer
+Vector
+
+
+在使用 interface 声明一个外部接口时，只可以使用（ ）修饰符修饰该接口。
+D
+private
+protected
+private protected
+public
+
+
+要使对象具有序列化能力，则其类应该实现如下哪个接口()。
+A
+java.io.Serializable
+java.lang.Cloneable,
+java.lang.CharSequence
+java.lang.Comparable
+
+
+关于 Socket 通信编程，以下描述错误的是：（ ）
+D
+服务器端通过new ServerSocket()创建TCP连接对象
+服务器端通过TCP连接对象调用accept()方法创建通信的Socket对象
+客户端通过new Socket()方法创建通信的Socket对象
+客户端通过new ServerSocket()创建TCP连接对象
+
+
+下列选项中属于面向对象设计方法主要特征的是（ ）。
+A
+继承
+自顶向下
+模块化
+逐步求精
+
+
+JAVA属于（ ）。
+D
+操作系统
+办公软件
+数据库系统
+计算机语言
+
+
+Math.round(11.5) 等于多少 (). Math.round(-11.5) 等于多少 ( ).
+C
+11 ,-11
+11 ,-12
+12 ,-11
+12 ,-12
+
+
+下列哪些语句关于内存回收的说明是正确的? ( )
+B
+程序员必须创建一个线程来释放内存
+内存回收程序负责释放无用内存
+内存回收程序允许程序员直接释放内存
+内存回收程序可以在指定的时间释放内存对象
+
+
+关于下列程序段的输出结果，说法正确的是：（ ）
+public class MyClass{
+static int i;
+public static void main(String argv[]){
+System.out.println(i);
+}
+}
+D
+有错误，变量i没有初始化。
+null
+1
+0
+
+05、多选
+
